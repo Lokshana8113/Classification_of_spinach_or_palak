@@ -8,14 +8,19 @@ A deep learning model has demonstrated remarkable results in image processing by
 
 
 **DATA PREPROCESSING**
+
 ![Screenshot 2024-07-20 192047](https://github.com/user-attachments/assets/fb7df7b3-097d-4857-8c07-aa5d3c1478f4)
 
 
-**CLASSIFICATION OF SPINACH(PALAK) USING CNN**
+**CLASSIFICATION OF PALAK(FRESH OR DRY)**
 
 ![Screenshot 2024-07-20 192113](https://github.com/user-attachments/assets/32fa181f-e9e6-407f-8726-60acc96dcab6)
 ![Screenshot 2024-07-20 192135](https://github.com/user-attachments/assets/d956c526-fdc8-48f2-a6b9-1f63415155d2)
 ![Screenshot 2024-07-20 192249](https://github.com/user-attachments/assets/1cab53f6-cd6b-4d43-ba35-4557b84e06af)
+
+
+**PREDICTION OF FRESHNESS OF THE PALAK**
+
 ![Screenshot 2024-07-20 192421](https://github.com/user-attachments/assets/764403f0-e020-4978-bb5c-2c4ecb5a0880)
 ![Screenshot 2024-07-20 192430](https://github.com/user-attachments/assets/170e5206-0091-486e-936b-6636c5b84618)
 
