@@ -1,0 +1,41 @@
+%%writefile templates/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf Classifier</title>
+</head>
+<body>
+    <h1>Leaf Classifier</h1>
+    <input type="file" id="fileInput">
+    <button onclick="predict()">Predict</button>
+    <div id="result"></div>
+
+    <script>
+    async function predict() {
+        const fileInput = document.getElementById('fileInput');
+        const file = fileInput.files[0];
+        const base64 = await convertToBase64(file);
+        const response = await fetch('/predict', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({image: base64})
+        });
+        const result = await response.text();
+        document.getElementById('result').innerText = result;
+    }
+
+    function convertToBase64(file) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve(reader.result.split(',')[1]);
+            reader.onerror = error => reject(error);
+        });
+    }
+    </script>
+</body>
+</html>
